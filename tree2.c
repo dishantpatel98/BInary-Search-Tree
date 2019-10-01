@@ -18,14 +18,14 @@ struct llnode*front=NULL;
 struct llnode*rear=NULL;
 
 int height(struct BinaryTreeNode* ptr){
-if(ptr==NULL){
-return 0;
+if(ptr==NULL){  //Condition to terminate the recursion
+return 0;       //this will be terminated at the leaf of the tree
 }
 
-int h_left=height(ptr->left);
+int h_left=height(ptr->left);//For every node we will find out the height of left and right sub-tree
 int h_right=height(ptr->right);
-if(h_left>h_right){
-return h_left+1;
+if(h_left>h_right){//if the height of left subtree is more we will add 1 to it and return that value to the value
+return h_left+1;   //to its parent node if  not then we will do the same thing to the right subtree
 }
 else
 
